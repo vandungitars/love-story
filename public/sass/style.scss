@@ -197,12 +197,10 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 #fh5co-main-content {
-	margin-left: 65%;
-	position: fixed;
+	margin-top: 100px;
+	position: relative;
 	z-index: 999;
 	min-height: 600px;
-	padding-left: 70px;
-	padding-right: 70px;
 	@media screen and (max-width: $screen-sm) {
 		margin-left: 0;
 		padding-left: 15px;

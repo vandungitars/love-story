@@ -1,13 +1,12 @@
 <template>
-    <div class="hello">
-        <div class="fh5co-loader"></div>
-
-        <aside id="fh5co-aside" role="sidebar" class="text-center"
-               :style="{ backgroundImage: `url(${require('@/assets/img_bg_1_gradient.jpg')})` }">
-            <h1 id="fh5co-logo"><a>Chú đẹp trai ♥ Em xinh gái</a></h1>
-        </aside>
-
-        <div id="fh5co-main-content">
+    <div class="flex-container">
+        <div class="flex-item">
+            <aside id="fh5co-aside" role="sidebar" class="text-center"
+                   :style="{ backgroundImage: `url(${require('@/assets/img_bg_1_gradient.jpg')})` }">
+                <h1 id="fh5co-logo"><a>Chú đẹp trai ♥ Em xinh gái</a></h1>
+            </aside>
+        </div>
+        <div id="fh5co-main-content" class="flex-item">
             <div class="velas">
                 <div class="fuego"></div>
                 <div class="fuego"></div>
@@ -175,8 +174,7 @@
             <div class="dt js-dt" style="min-height: 0px !important;">
                 <div class="dtc js-dtc">
                     <div class="simply-countdown-one animate-box" data-animate-effect="fadeInUp"></div>
-
-                    <div class="row" style="padding-left: 20px">
+                    <div class="row">
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-lg-12">
@@ -193,41 +191,6 @@
                     </div>
                 </div>
             </div>
-            <!--            <section class="cd-horizontal-timeline" style="margin-top: -200px;">-->
-            <!--                <div class="timeline">-->
-            <!--                    <div class="events-wrapper">-->
-            <!--                        <div class="events">-->
-            <!--                            <ol>-->
-            <!--                                <li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>-->
-            <!--                                <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>-->
-            <!--                            </ol>-->
-            <!--                            <span class="filling-line" aria-hidden="true"></span>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-
-            <!--                <div class="events-content">-->
-            <!--                    <ol>-->
-            <!--                        <li class="selected" data-date="16/01/2014">-->
-            <!--                            <h4>Horizontal Timeline</h4>-->
-            <!--                                <em>January 16th, 2014</em>-->
-            <!--                                <img src="images/img_bg_1_gradient.jpg" alt="Italian Trulli" class="timeline-image">-->
-            <!--                        </li>-->
-
-            <!--                        <li data-date="28/02/2014">-->
-            <!--                            <h2>Event title here</h2>-->
-            <!--                            <em>February 28th, 2014</em>-->
-            <!--                            <p>-->
-            <!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia,-->
-            <!--                                fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic-->
-            <!--                                repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi-->
-            <!--                                reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae,-->
-            <!--                                temporibus dolores porro doloribus.-->
-            <!--                            </p>-->
-            <!--                        </li>-->
-            <!--                    </ol>-->
-            <!--                </div>-->
-            <!--            </section>-->
         </div>
     </div>
 </template>
@@ -242,19 +205,28 @@ export default {
 </script>
 
 <style scoped>
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+}
+.flex-item {
+    flex: 50%;
+}
 #cake {
     display: block;
     position: relative;
     margin: -10em auto 0 auto;
-    margin-left: 35px;
 }
 .velas {
+    justify-content: center;
+    align-items: center;
+    display: inline;
     background: #ffffff;
     border-radius: 10px;
     position: absolute;
-    top: 228px;
-    left: 50%;
-    margin-left: -26.4px;
+    top: 90px;
     margin-top: -8.33333333px;
     width: 5px;
     height: 35px;

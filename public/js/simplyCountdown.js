@@ -98,8 +98,7 @@
             return {
                 days: createCountdownElt(countdown, parameters, 'simply-days-section'),
                 hours: createCountdownElt(countdown, parameters, 'simply-hours-section'),
-                minutes: createCountdownElt(countdown, parameters, 'simply-minutes-section'),
-                seconds: createCountdownElt(countdown, parameters, 'simply-seconds-section')
+                minutes: createCountdownElt(countdown, parameters, 'simply-minutes-section')
             };
         }
 
@@ -273,8 +272,7 @@
                     countdown.innerHTML =
                         days + ' ' + dayWord + ', ' +
                         hours + ' ' + hourWord + ', ' +
-                        minutes + ' ' + minuteWord + ', ' +
-                        seconds + ' ' + secondWord + '.';
+                        minutes + ' ' + minuteWord + ', ';
 
                 } else {
                     fullCountDown.days.amount.textContent = (parameters.zeroPad && days.toString().length < 2 ? '0' : '') + days;
